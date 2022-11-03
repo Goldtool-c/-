@@ -16,8 +16,6 @@ public class BMPtoMatrixParser {
         }
         return instance;
     }
-    //Этот метод занимается преобразованием изображения в матрицу пикселей на базе
-    //Класса Color. Считай, что каждый объект этого класса это пиксель, внутри которого хранится вся инфа о нём
     public Color[][] parse(File bmpImage) throws IOException {
         BufferedImage image = ImageIO.read(bmpImage);
         Color[][] result = new Color[image.getWidth()][image.getHeight()];

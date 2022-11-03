@@ -2,11 +2,11 @@ package by.gladyshev.util;
 
 import java.awt.*;
 
-public class RGBtoGreyConverter { //Преобразование цветной картинки в монохром
-    //Это рудимент, оставшейся от моей первой попытки сделать лабу
-    //Эту хрень можно удалить
+public class RGBtoGreyConverter {
     private static RGBtoGreyConverter instance;
-
+    //Преобразование цветной матрицы пикселей в монохром
+    //Это рудимент, оставшейся от моей первой попытки сделать лабу
+    //можно удалить
     private RGBtoGreyConverter(){}
     public static RGBtoGreyConverter getInstance() {
         if(instance==null) {
@@ -18,7 +18,7 @@ public class RGBtoGreyConverter { //Преобразование цветной 
     {
         int[][] result = new int[pixels.length][pixels[0].length];
         for (int i = 0; i < pixels.length; i++) {
-            for (int j = 0; j < pixels[j].length; j++) {
+            for (int j = 0; j < pixels[i].length; j++) {
                 int blue = pixels[i][j].getBlue();
                 int green = pixels[i][j].getGreen();
                 int red = pixels[i][j].getRed();
@@ -33,7 +33,7 @@ public class RGBtoGreyConverter { //Преобразование цветной 
     {
         Color[][] result = new Color[pixels.length][pixels[0].length];
         for (int i = 0; i < pixels.length; i++) {
-            for (int j = 0; j < pixels[j].length; j++) {
+            for (int j = 0; j < pixels[i].length; j++) {
                 int blue = (int) (0.25*pixels[i][j]);
                 int green = (int) (0.45*pixels[i][j]);
                 int red = (int) (0.2*pixels[i][j]);

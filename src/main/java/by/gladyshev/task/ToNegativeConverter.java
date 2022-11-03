@@ -17,7 +17,7 @@ public class ToNegativeConverter {
         Color[][] result = new Color[pixels.length][pixels[0].length];
         for (int i = 0; i < pixels.length; i++) {
             for (int j = 0; j < pixels[i].length; j++) {
-                //Преобразование в негатив осуществляется отниманием текущего цветового значения пикселя от 255
+                //Преобразование в негатив осуществляется вычитанием текущего цветового значения пикселя из 255
                 int blue = 255 - pixels[i][j].getBlue();
                 int green = 255 - pixels[i][j].getGreen();
                 int red = 255 - pixels[i][j].getRed();

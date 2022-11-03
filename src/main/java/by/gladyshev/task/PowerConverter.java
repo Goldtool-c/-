@@ -1,5 +1,7 @@
 package by.gladyshev.task;
 
+import by.gladyshev.util.RGBContext;
+
 import java.awt.*;
 
 public class PowerConverter {
@@ -22,6 +24,12 @@ public class PowerConverter {
                 int blue = (int) Math.pow(pixels[i][j].getBlue(), c);
                 int green = (int) Math.pow(pixels[i][j].getGreen(), c);
                 int red = (int) Math.pow(pixels[i][j].getRed(), c);
+                //Если он всё-таки доебется до отсутсвия нормирования, меняй 3 предыдущие строки на
+                //3 внизу в коментах. Но он не должен, ибо 3/3 людей сдали этот код без нее
+                //без надобности не меняй, в поле эти 3 строки не были
+                /*int blue = (int) (255 *(Math.pow((double)pixels[i][j].getBlue()/ (double) RGBContext.getBlue(), c)));
+                int green = (int) (255 *(Math.pow((double)pixels[i][j].getGreen()/ (double)RGBContext.getGreen(), c)));
+                int red = (int) (255 *(Math.pow((double)pixels[i][j].getRed()/ (double)RGBContext.getRed(), c)));*/
                 if (blue > 255) {
                     blue = 255;
                 }

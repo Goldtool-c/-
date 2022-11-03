@@ -12,13 +12,14 @@ public class FindMaxRGB {
         }
         return instance;
     }
-    //Поиск максимальных значений каждого из цветов для последующей нормировки в
-    /**link @util.LogConverter**/
+
     public void find(Color[][] pixels)
     {
         Color temp;
+        //Поиск максимальных значений каждого из цветов для последующей нормировки в
+        /**link @util.LogConverter**/
         for (int i = 0; i < pixels.length; i++) {
-            for (int j = 0; j < pixels[j].length ; j++) {
+            for (int j = 0; j < pixels[i].length ; j++) {
                 temp = pixels[i][j];
                 if(temp.getRed()>=RGBContext.getRed())
                 {

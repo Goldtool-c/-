@@ -16,9 +16,9 @@ public class LogConverter {
     }
     public Color[][] convert(Color[][] pixels) {
         Color[][] result = new Color[pixels.length][pixels[0].length];
+        // F' = 255 * (log(1+F)/log(1+Fmax)
         for (int i = 0; i < pixels.length; i++) {
             for (int j = 0; j < pixels[i].length; j++) {
-                // F' = 255 * (log(1+F)/log(1+Fmax)
                 int blue = (int) (255 * (Math.log(1 + pixels[i][j].getBlue())/Math.log(1 + RGBContext.getBlue())));
                 int green = (int) (255 * (Math.log(1 + pixels[i][j].getGreen())/Math.log(1 + RGBContext.getGreen())));
                 int red = (int) (255 * (Math.log(1 + pixels[i][j].getRed())/Math.log(1+RGBContext.getRed())));

@@ -14,8 +14,8 @@ public class MultiplyByConstant {
     }
     public Color[][] add(double c, Color[][] pixels)
     {
-        //Опять же, проходим циклами по матрице пикселей
         Color[][] result = new Color[pixels.length][pixels[0].length];
+        //Опять же, проходим циклами по матрице пикселей
         for (int i = 0; i < pixels.length; i++) {
             for (int j = 0; j < pixels[i].length; j++) {
                 //И умножаем каждый цвет каждого пикселя на с
